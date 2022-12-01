@@ -1,5 +1,5 @@
 import {executionTime, getDate} from "../common/exec_time.ts";
-import {sum} from "../common/math.ts";
+import {sortAsc, sum} from "../common/math.ts";
 const start = getDate()
 
 let text = "";
@@ -21,7 +21,7 @@ for(let line of text.split('\n')) {
   }
 }
 
-const topElfes = elfCalories.sort((a, b) => a - b).slice(-3);
+const topElfes = elfCalories.sort(sortAsc).slice(-3);
 const total = topElfes.reduce(sum)
 console.log(`%cThe sum of calories from top 3 elfs is: %c${total} %ckcal`, "color: green", "color: yellow", "color: green")
 const end = getDate()
