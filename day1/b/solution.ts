@@ -1,5 +1,5 @@
-import {executionTime, getDate} from "../common/exec_time.ts";
-import {sortAsc, sum} from "../common/math.ts";
+import {executionTime, getDate} from "../../common/exec_time.ts";
+import {sortAsc, sum} from "../../common/math.ts";
 const start = getDate()
 
 let text = "";
