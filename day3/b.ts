@@ -23,9 +23,9 @@ function solve(i: string[]) {
     }
     sets[tempIdx].push(q)
   })
-  return sets.map(i => {
-    return findMatch(i[0].split(""), i[1].split(""), i[2].split(""))
-  }).reduce((a, b) => a + b, 0)
+  return sets
+      .map(z => findMatch(z[0].split(""), z[1].split(""), z[2].split("")))
+      .reduce((a, b) => a + b, 0)
 }
 
 function findMatch(i: string[], j: string[], k: string[]): number {
